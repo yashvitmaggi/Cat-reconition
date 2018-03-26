@@ -20,9 +20,9 @@ test_set_x_flatten = test_set_x_orig.reshape(test_set_x_orig.shape[0],-1).T
 
 train_set_x = train_set_x_flatten/255.
 test_set_x = test_set_x_flatten/255.
-
+np.random.seed(1)
 # GRADED FUNCTION: sigmoid
-
+np.random.seed(1)
 def sigmoid(z):
   
     s = 1/(1+np.exp(-z))
@@ -32,7 +32,7 @@ def sigmoid(z):
 
 def initialize_with_zeros(dim):
 
-    w = np.zeros((dim,1))
+    w = np.random.randn((dim,1))
     b = 0
 
     assert(w.shape == (dim, 1))
